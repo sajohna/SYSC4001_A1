@@ -19,8 +19,8 @@ int main(int argc, char** argv) {
     std::string execution;  //!< string to accumulate the execution output
 
     /******************ADD YOUR VARIABLES HERE*************************/
-
-
+    std::pair<std::string, int> boilerplate;
+    int time = 0;
 
     /******************************************************************/
 
@@ -29,7 +29,11 @@ int main(int argc, char** argv) {
         auto [activity, duration_intr] = parse_trace(trace);
 
         /******************ADD YOUR SIMULATION CODE HERE*************************/
-
+        //for cpu
+        
+        //for syscall and end_io
+        boilerplate = intr_boilerplate(time, duration_intr, 10, vectors);
+        execution += std::get<0>(boilerplate) + ", " + std::to_string(std::get<1>(boilerplate));
 
 
         /************************************************************************/
