@@ -21,7 +21,7 @@ int main(int argc, char** argv) {
     /******************ADD YOUR VARIABLES HERE*************************/
     std::pair<std::string, int> boilerplate;
     int time = 0;
-
+    int device_number = 0;
     /******************************************************************/
 
     //parse each line of the input trace file
@@ -33,9 +33,22 @@ int main(int argc, char** argv) {
         
         //for syscall and end_io
         boilerplate = intr_boilerplate(time, duration_intr, 10, vectors);
-        execution += std::get<0>(boilerplate) + ", " + std::to_string(std::get<1>(boilerplate));
+        execution += std::get<0>(boilerplate);
+        time += std::get<1>(boilerplate);
 
+        //for cpu
+        
 
+        execution += std::to_string(time) + ", " + std::to_string(duration_intr) + ", call device driver\n";
+        time += duration_intr;
+
+        execution += "...\n";
+        time += delays[device_number];
+
+        execution += std::to_string(time) + ", " + std::to_string(1) + ", IRET // IRET after " + std::to_string(delays[device_number]) +"ms\n";
+        time ++;
+
+        device_number ++;
         /************************************************************************/
 
     }
