@@ -20,8 +20,7 @@ int main(int argc, char** argv) {
 
     /******************ADD YOUR VARIABLES HERE*************************/
     std::pair<std::string, int> boilerplate;
-    int time = 0;
-    int device_number = 0;
+    long int time = 0;
     /******************************************************************/
 
     //parse each line of the input trace file
@@ -29,26 +28,33 @@ int main(int argc, char** argv) {
         auto [activity, duration_intr] = parse_trace(trace);
 
         /******************ADD YOUR SIMULATION CODE HERE*************************/
-        //for cpu
-        
-        //for syscall and end_io
-        boilerplate = intr_boilerplate(time, duration_intr, 10, vectors);
-        execution += std::get<0>(boilerplate);
-        time += std::get<1>(boilerplate);
+        std::cout << "testing compilation" << std::endl;
+        if (!activity.compare("CPU")){
+            execution += std::to_string(time) + ", " + std::to_string(duration_intr) + ", CPU burst\n";
+            time += duration_intr;
 
-        //for cpu
-        
+        } else if (!activity.compare("SYSCALL")){
+            boilerplate = intr_boilerplate(time, duration_intr, 10, vectors);
+            execution += std::get<0>(boilerplate);
+            time = std::get<1>(boilerplate);
 
-        execution += std::to_string(time) + ", " + std::to_string(duration_intr) + ", call device driver\n";
-        time += duration_intr;
+            execution += std::to_string(time) + ", " + std::to_string(delays[duration_intr]) + ", execute I/O\n";
+            time += delays[duration_intr];
 
-        execution += "...\n";
-        time += delays[device_number];
+            execution += std::to_string(time) + ", " + std::to_string(1) + ", execute IRET\n";
+            time ++;
 
-        execution += std::to_string(time) + ", " + std::to_string(1) + ", IRET // IRET after " + std::to_string(delays[device_number]) +"ms\n";
-        time ++;
+            execution += std::to_string(time) + ", " + std::to_string(1) + ", switch out of kernel mode\n";
+            time++;
 
-        device_number ++;
+            execution += std::to_string(time) + ", " + std::to_string(10) + ", context reloaded\n";
+            time += 10;
+        } else{
+            int random = (rand() % 50) + 1;
+            execution += std::to_string(time) + ", " + std::to_string(random) + ", end of I/O " +std::to_string(duration_intr) +": interrupt \n";
+            time += random;
+        }
+
         /************************************************************************/
 
     }
