@@ -1,0 +1,155 @@
+0, 37, CPU burst
+37, 1, switch to kernel mode
+38, 10, context saved
+48, 1, find vector 1 in memory position 0x0002
+49, 1, load address 0X029C into the PC
+50, 100, execute I/O
+150, 1, execute IRET
+151, 1, switch out of kernel mode
+152, 10, context reloaded
+162, 36, CPU burst
+198, 42, end of I/O 1: interrupt 
+240, 35, CPU burst
+275, 1, switch to kernel mode
+276, 10, context saved
+286, 1, find vector 7 in memory position 0x000E
+287, 1, load address 0X00BD into the PC
+288, 152, execute I/O
+440, 1, execute IRET
+441, 1, switch out of kernel mode
+442, 10, context reloaded
+452, 34, CPU burst
+486, 18, end of I/O 7: interrupt 
+504, 33, CPU burst
+537, 1, switch to kernel mode
+538, 10, context saved
+548, 1, find vector 13 in memory position 0x001A
+549, 1, load address 0X06C7 into the PC
+550, 636, execute I/O
+1186, 1, execute IRET
+1187, 1, switch out of kernel mode
+1188, 10, context reloaded
+1198, 32, CPU burst
+1230, 35, end of I/O 13: interrupt 
+1265, 31, CPU burst
+1296, 1, switch to kernel mode
+1297, 10, context saved
+1307, 1, find vector 19 in memory position 0x0026
+1308, 1, load address 0X0765 into the PC
+1309, 652, execute I/O
+1961, 1, execute IRET
+1962, 1, switch out of kernel mode
+1963, 10, context reloaded
+1973, 30, CPU burst
+2003, 1, end of I/O 19: interrupt 
+2004, 29, CPU burst
+2033, 1, switch to kernel mode
+2034, 10, context saved
+2044, 1, find vector 4 in memory position 0x0008
+2045, 1, load address 0X0292 into the PC
+2046, 250, execute I/O
+2296, 1, execute IRET
+2297, 1, switch out of kernel mode
+2298, 10, context reloaded
+2308, 28, CPU burst
+2336, 20, end of I/O 4: interrupt 
+2356, 80, CPU burst
+2436, 1, switch to kernel mode
+2437, 10, context saved
+2447, 1, find vector 10 in memory position 0x0014
+2448, 1, load address 0X07B0 into the PC
+2449, 564, execute I/O
+3013, 1, execute IRET
+3014, 1, switch out of kernel mode
+3015, 10, context reloaded
+3025, 79, CPU burst
+3104, 25, end of I/O 10: interrupt 
+3129, 78, CPU burst
+3207, 1, switch to kernel mode
+3208, 10, context saved
+3218, 1, find vector 16 in memory position 0x0020
+3219, 1, load address 0X02DF into the PC
+3220, 956, execute I/O
+4176, 1, execute IRET
+4177, 1, switch out of kernel mode
+4178, 10, context reloaded
+4188, 77, CPU burst
+4265, 29, end of I/O 16: interrupt 
+4294, 76, CPU burst
+4370, 1, switch to kernel mode
+4371, 10, context saved
+4381, 1, find vector 1 in memory position 0x0002
+4382, 1, load address 0X029C into the PC
+4383, 100, execute I/O
+4483, 1, execute IRET
+4484, 1, switch out of kernel mode
+4485, 10, context reloaded
+4495, 75, CPU burst
+4570, 9, end of I/O 1: interrupt 
+4579, 57, CPU burst
+4636, 1, switch to kernel mode
+4637, 10, context saved
+4647, 1, find vector 7 in memory position 0x000E
+4648, 1, load address 0X00BD into the PC
+4649, 152, execute I/O
+4801, 1, execute IRET
+4802, 1, switch out of kernel mode
+4803, 10, context reloaded
+4813, 56, CPU burst
+4869, 13, end of I/O 7: interrupt 
+4882, 55, CPU burst
+4937, 1, switch to kernel mode
+4938, 10, context saved
+4948, 1, find vector 14 in memory position 0x001C
+4949, 1, load address 0X0165 into the PC
+4950, 456, execute I/O
+5406, 1, execute IRET
+5407, 1, switch out of kernel mode
+5408, 10, context reloaded
+5418, 54, CPU burst
+5472, 15, end of I/O 14: interrupt 
+5487, 53, CPU burst
+5540, 1, switch to kernel mode
+5541, 10, context saved
+5551, 1, find vector 20 in memory position 0x0028
+5552, 1, load address 0X07B7 into the PC
+5553, 0, execute I/O
+5553, 1, execute IRET
+5554, 1, switch out of kernel mode
+5555, 10, context reloaded
+5565, 52, CPU burst
+5617, 6, end of I/O 20: interrupt 
+5623, 25, CPU burst
+5648, 1, switch to kernel mode
+5649, 10, context saved
+5659, 1, find vector 6 in memory position 0x000C
+5660, 1, load address 0X0639 into the PC
+5661, 265, execute I/O
+5926, 1, execute IRET
+5927, 1, switch out of kernel mode
+5928, 10, context reloaded
+5938, 24, CPU burst
+5962, 46, end of I/O 6: interrupt 
+6008, 23, CPU burst
+6031, 1, switch to kernel mode
+6032, 10, context saved
+6042, 1, find vector 18 in memory position 0x0024
+6043, 1, load address 0X060A into the PC
+6044, 123, execute I/O
+6167, 1, execute IRET
+6168, 1, switch out of kernel mode
+6169, 10, context reloaded
+6179, 22, CPU burst
+6201, 32, end of I/O 18: interrupt 
+6233, 21, CPU burst
+6254, 1, switch to kernel mode
+6255, 10, context saved
+6265, 1, find vector 2 in memory position 0x0004
+6266, 1, load address 0X0695 into the PC
+6267, 150, execute I/O
+6417, 1, execute IRET
+6418, 1, switch out of kernel mode
+6419, 10, context reloaded
+6429, 20, CPU burst
+6449, 28, end of I/O 2: interrupt 
+6477, 80, CPU burst

@@ -1,0 +1,45 @@
+0, 90, CPU burst
+90, 1, switch to kernel mode
+91, 10, context saved
+101, 1, find vector 9 in memory position 0x0012
+102, 1, load address 0X036C into the PC
+103, 156, execute I/O
+259, 1, execute IRET
+260, 1, switch out of kernel mode
+261, 10, context reloaded
+271, 81, CPU burst
+352, 42, end of I/O 9: interrupt 
+394, 18, CPU burst
+412, 1, switch to kernel mode
+413, 10, context saved
+423, 1, find vector 18 in memory position 0x0024
+424, 1, load address 0X060A into the PC
+425, 123, execute I/O
+548, 1, execute IRET
+549, 1, switch out of kernel mode
+550, 10, context reloaded
+560, 27, CPU burst
+587, 18, end of I/O 18: interrupt 
+605, 72, CPU burst
+677, 1, switch to kernel mode
+678, 10, context saved
+688, 1, find vector 4 in memory position 0x0008
+689, 1, load address 0X0292 into the PC
+690, 250, execute I/O
+940, 1, execute IRET
+941, 1, switch out of kernel mode
+942, 10, context reloaded
+952, 36, CPU burst
+988, 35, end of I/O 4: interrupt 
+1023, 63, CPU burst
+1086, 1, switch to kernel mode
+1087, 10, context saved
+1097, 1, find vector 13 in memory position 0x001A
+1098, 1, load address 0X06C7 into the PC
+1099, 636, execute I/O
+1735, 1, execute IRET
+1736, 1, switch out of kernel mode
+1737, 10, context reloaded
+1747, 45, CPU burst
+1792, 1, end of I/O 13: interrupt 
+1793, 54, CPU burst

@@ -1,0 +1,11 @@
+0, 87, CPU burst
+87, 1, switch to kernel mode
+88, 10, context saved
+98, 1, find vector 2 in memory position 0x0004
+99, 1, load address 0X0695 into the PC
+100, 150, execute I/O
+250, 1, execute IRET
+251, 1, switch out of kernel mode
+252, 10, context reloaded
+262, 78, CPU burst
+340, 42, end of I/O 2: interrupt 
